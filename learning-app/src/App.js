@@ -1,5 +1,6 @@
 import './App.css';
 import CountReducer from './components/CountReducer';
+import CountWithReducer from './components/CountWithReducer';
 
 function App() {
   return (
@@ -7,6 +8,8 @@ function App() {
     
     <h1>useReducer</h1>
     <CountReducer/>
+    <br/><br/><br/>
+    <CountWithReducer/>
     </div>
   );
 }

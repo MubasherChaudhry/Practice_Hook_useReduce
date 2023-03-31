@@ -16,7 +16,7 @@ function CountReducer() {
   return (
     <div>
       <h1>Counter with the Help Of useState </h1>
-      <h2>Current states of Count is {count} </h2>
+      <h2>Current status of Count is {count} </h2>
       <h3>
         Please click on the buttons bellow to <br />
         trigger the Required Function{" "}
