@@ -2,7 +2,7 @@ import { useReducer } from "react";
 
 const initialState = {
   firstCount: 0,
-  secondCount: 7,
+  secondCount: 1,
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -12,8 +12,8 @@ const reducer = (state, action) => {
       return { ...state, firstCount: state.firstCount + 6 };
     case "decrementC1":
       return { ...state, firstCount: state.firstCount - 1 };
-    case "resetC1":
-      return initialState;
+    // case "resetC1":
+    //   return initialState;
 
     case "addOneC2":
       return { ...state, secondCount: state.secondCount + 1 };
@@ -22,7 +22,7 @@ const reducer = (state, action) => {
     case "decrementC2":
       return { ...state, secondCount: state.secondCount - 1 };
     case "resetC2":
-      return initialState;
+      return initialState
     default:
       return state;
   }
@@ -44,7 +44,7 @@ function ForthExample() {
       <button onClick={() => dispatch({ type: "decrementC1" })}>
         Decrement C1
       </button>
-      <button onClick={() => dispatch({ type: "resetC1" })}>Rest C1</button>
+      {/* <button onClick={() => dispatch({ type: "resetC1" })}>Rest C1</button> */}
       <br />
       <br />
       <button onClick={() => dispatch({ type: "addOneC2" })}>Add one C2</button>
@@ -52,12 +52,12 @@ function ForthExample() {
       <button onClick={() => dispatch({ type: "decrementC2" })}>
         Decrement C2
       </button>
-      <button onClick={() => dispatch({ type: "resetC2" })}>Rest C2</button>
+      <button onClick={() => dispatch({ type: "resetC2" })}>Rest Both count Status</button>{}
       <p>
         this counter contain two properties in initial State <br /> we used rest
         operator and dot notation to target specific property
       </p>
-      
+
     </div>
   );
 }
