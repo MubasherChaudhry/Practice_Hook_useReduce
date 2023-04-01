@@ -1,6 +1,8 @@
+
 import './App.css';
 import CountReducer from './components/CountReducer';
 import CountWithReducer from './components/CountWithReducer';
+import ForthExample from './components/ForthExample';
 import ThirdExampleReducer from './components/ThirdExampleReducer';
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
     <CountWithReducer/>
     <br/><br/><br/>
     <ThirdExampleReducer/>
+    <br/><br/><br/>
+    <ForthExample/>
     </div>
   );
 }
