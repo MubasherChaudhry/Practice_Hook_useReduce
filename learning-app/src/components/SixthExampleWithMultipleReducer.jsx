@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 
 const initialState = "Margo";
+const initialStateTwo = "Mobi";
 const reducer = (state, action) => {
   switch (action.type) {
     case "addName1":
@@ -14,7 +15,7 @@ const reducer = (state, action) => {
 
 function SixthExampleWithMultipleReducer() {
   const [count, dispatch] = useReducer(reducer, initialState);
-  const [countTwo, dispatchTwo] = useReducer(reducer, initialState);
+  const [countTwo, dispatchTwo] = useReducer(reducer, initialStateTwo);
   return (
     <div>
       <h1>Using the String As initialState</h1>
@@ -35,23 +36,35 @@ function SixthExampleWithMultipleReducer() {
         Buttons and the other action <br /> With The use of type and value
         property pr <br /> We are able to change the value Dynamically <br />
         for Reset Button.
+      </p>
 
-        <h3>Using the Second useReducer in same Component </h3>
-        <h2>{countTwo} </h2>
-        <button onClick={()=>dispatchTwo({type:'addName1', value:'Mobi'})} >Change Name 1</button>
-        <button onClick={()=>dispatchTwo({type:'addName1', value:'Max'})} >Change Name2</button>
-        <button onClick={()=>dispatchTwo({type:'addName1', value:'Matt'})} >Change Name3</button>
-        <button onClick={()=>dispatchTwo({type:'addName1', value:'007'})} >Change Name4</button>
+      <h3>Using the Second useReducer in same Component </h3>
+      <h2>{countTwo} </h2>
+      <button onClick={() => dispatchTwo({ type: "addName1", value: "Mobi" })}>
+        Change Name 1
+      </button>
+      <button onClick={() => dispatchTwo({ type: "addName1", value: "Max" })}>
+        Change Name2
+      </button>
+      <button onClick={() => dispatchTwo({ type: "addName1", value: "Matt" })}>
+        Change Name3
+      </button>
+      <button onClick={() => dispatchTwo({ type: "addName1", value: "007" })}>
+        Change Name4
+      </button>
       <button onClick={() => dispatch({ type: "reset" })}>Reset 1</button>
 
-        <button onClick={()=>dispatchTwo({type:'reset'})} >Reset 2</button>
+      <button onClick={() => dispatchTwo({ type: "reset" })}>Reset 2</button>
 
-        <p>We can see here Multiple UseReduces can use <br />
+      <p>
+        We can see here Multiple UseReduces can use <br />
         Same initialState and reducer function as well <br />
         we just need specific (Unique) Name for <br />
-         assigning the useReducer </p>
-
+        assigning the useReducer
       </p>
+      <br />
+      <br />
+    
     </div>
   );
 }

@@ -4,6 +4,7 @@ import CountReducer from './components/CountReducer';
 import CountWithReducer from './components/CountWithReducer';
 import FifthExample from './components/FifthExample';
 import ForthExample from './components/ForthExample';
+import SeventhExample from './components/SeventhExample';
 import SixthExampleWithMultipleReducer from './components/SixthExampleWithMultipleReducer';
 import ThirdExampleReducer from './components/ThirdExampleReducer';
 
@@ -25,6 +26,8 @@ function App() {
     <FifthExample/>
     <br /><br /><br />
     <SixthExampleWithMultipleReducer/>
+    <br /><br /><br />
+    <SeventhExample/>
     </div>
   );
 }
