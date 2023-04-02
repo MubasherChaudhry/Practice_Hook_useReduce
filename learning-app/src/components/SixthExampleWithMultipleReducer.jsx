@@ -28,10 +28,11 @@ function SixthExampleWithMultipleReducer() {
       <button onClick={() => dispatch({ type: "addName1", value: "Matt" })}>
         Change Name 3
       </button>
-      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+      <button onClick={() => dispatch({ type: "reset" })}>Reset 1</button>
+      <button onClick={() => dispatchTwo({ type: "reset" })}>Reset 2</button>
       <p>
         Here we have used only one action in switch <br /> for three Different
-        Buttons and the other action <br /> With The heuse of type and value
+        Buttons and the other action <br /> With The use of type and value
         property pr <br /> We are able to change the value Dynamically <br />
         for Reset Button.
 
@@ -40,7 +41,10 @@ function SixthExampleWithMultipleReducer() {
         <button onClick={()=>dispatchTwo({type:'addName1', value:'Mobi'})} >Change Name 1</button>
         <button onClick={()=>dispatchTwo({type:'addName1', value:'Max'})} >Change Name2</button>
         <button onClick={()=>dispatchTwo({type:'addName1', value:'Matt'})} >Change Name3</button>
-        <button onClick={()=>dispatchTwo({type:'reset'})} >Reset</button>
+        <button onClick={()=>dispatchTwo({type:'addName1', value:'007'})} >Change Name4</button>
+      <button onClick={() => dispatch({ type: "reset" })}>Reset 1</button>
+
+        <button onClick={()=>dispatchTwo({type:'reset'})} >Reset 2</button>
 
         <p>We can see here Multiple UseReduces can use <br />
         Same initialState and reducer function as well <br />
